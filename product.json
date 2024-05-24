@@ -1,0 +1,33 @@
+[
+    {
+      "name": "ROG Strix GeForce RTX 3080",
+      "price": 200,
+      "image": "https://m.media-amazon.com/images/I/81V3EDijI1L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "name": "TUF Gaming GeForce RTX™ 3080",
+      "price": 300,
+      "image": "https://m.media-amazon.com/images/I/816BVTpUdKL.jpg"
+    },
+    {
+      "name": "MSI GeForce RTX4090 GAMING ",
+      "price": 250,
+      "image": "https://m.media-amazon.com/images/I/81KR0fO8WgL._AC_UF1000,1000_QL80_DpWeblab_.jpg"
+    },
+    {
+      "name": "MSI GeForce RTX4090 GAMING",
+      "price": 100,
+      "image": "https://m.media-amazon.com/images/I/811sBakp3+L.jpg"
+    },
+    {
+      "name": "ASUS ROG RTX 3090 White OC",
+      "price": 500,
+      "image": "https://m.media-amazon.com/images/I/81ms5W5CCvL.jpg"
+    },
+    {
+      "name": "ASUS Rog Strix RTX 4060 GPU",
+      "price": 400,
+      "image": "https://m.media-amazon.com/images/I/8196MD83TwL._AC_UF1000,1000_QL80_.jpg"
+    }
+]
+  

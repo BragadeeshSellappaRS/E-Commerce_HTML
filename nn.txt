@@ -1,0 +1,22 @@
+<div class="card">
+            <img src="https://m.media-amazon.com/images/I/81V3EDijI1L._AC_UF1000,1000_QL80_.jpg" style="width: 300px;" class="image">
+            <h1 class="name">ROG Strix GeForce RTX 3080</h1>
+            
+            <h2 class="price">$100.0</h2>
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/816BVTpUdKL.jpg" style="width: 300px;" class="image">
+            <H1 class="name">TUF Gaming GeForce RTX™ 3080</H1>
+           <h2 class="price">$250.0</h2>
+            <div class="rating"></div>
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/81KR0fO8WgL._AC_UF1000,1000_QL80_DpWeblab_.jpg" style="width: 300px;" class="image">
+            <H1 class="name">TMSI GeForce RTX 4090 GAMING </H1>
+           <h2 class="price">$200.0</h2>
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/811sBakp3+L.jpg" style="width: 300px;" class="image">
+            <H1 class="name">TMSI GeForce RTX 4090 GAMING </H1>
+            <h2 class="price">$200.0</h2>
+        </div>

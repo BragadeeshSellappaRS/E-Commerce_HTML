@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> <title>Metazord</title>
+</head>
+
+<style>
+    
+*{box-sizing: border-box; -webkit-box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font: 16px/1.3 sans-serif; }
+
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 70%; 
+
+}
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+  visibility: hidden; 
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width:       60px;
+  height:      60px;
+  line-height: 60px; 
+  text-align: center;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+.CSSgal .prevNext a+a {
+  left: auto;
+  right: 0;
+}
+
+
+.CSSgal .bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+.CSSgal .bullets > a {
+  display: inline-block;
+  width:       30px;
+  height:      30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+  background: rgba(255, 255, 255, 0.5); 
+}
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+
+.CSSgal{
+  color: #fff;  
+  text-align: center;
+}
+.CSSgal .slider h2 {
+  margin-top: 40vh;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  word-spacing: 0.2em;
+  font-size: 3em;
+}
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+
+    body{
+        background-color: rgb(31, 31, 31);
+        font-family: "Manrope", sans-serif;
+        color: rgb(0, 0, 0);
+        
+    }
+    nav{
+        padding: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: white;
+        background-color: black;
+        font-size: large ;
+    }
+    
+    ul{
+        display: flex;
+        margin: 10px;
+        list-style-type: none;
+        gap: 100px;
+        padding-top: 20px;
+        
+    }
+    li{
+        cursor: pointer;
+    }
+    li:hover{
+        color: green;
+    }
+    .card-container{
+        padding: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-weight: lighter;
+        
+        
+    }
+    .card{
+        margin-right: 10px;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.2s;
+        color: rgb(0, 0, 0);
+        color: white;
+        
+
+    }
+    .card:hover{
+        box-shadow: 0px 0px 10px black;
+        transform: scale(1.05);
+    
+        
+    }
+    .vid{
+    
+        display: flex;
+        color: white;
+        background-color: black;
+        
+    }
+    h1{
+        padding: 30px;
+        color: white;
+    }
+    .foot{
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        padding-bottom: 20px;
+        font-size: larger;
+    }
+
+    a:link{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    a:visited{
+        color: green;
+    }
+    a:hover{
+        color: green;
+    }
+    button{
+        padding: 20px;
+        background-color: transparent;
+        border-radius: 30px;
+        cursor: pointer;
+        text-align: center;
+        border-color: rgba(0, 128, 0, 0);
+    }
+    .press{
+        text-align: center;
+        padding-top: 30px;
+    }
+    button:hover{
+        color: rgb(255, 255, 255);
+        border-color: rgba(0, 255, 0, 0);
+        background-color: rgb(0, 255, 0);
+    }
+    .vid-container{
+        display: flex;
+        padding: 20PX;
+    }
+    .content{
+        padding: 30px;
+    
+    }
+
+    .pp{
+        padding: 20px;
+        border-radius: 40px;
+        width: 90%;
+        padding-left: 200px;
+        
+    }
+</style>
+<body>
+    <nav>
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/09/nvidia-30-series-super-leaked-specifications.jpg" style="width: 15%;border-radius: 30px;">
+        <ul class="links">
+            
+            <li class="link">CART</li>
+            <li class="link">PRODUCT</li>
+            <li class="link">ABOUT</li>
+        </ul>
+       
+    </nav>  
+
+    <div class="pp">
+        <div class="CSSgal">
+    
+            <!-- Don't wrap targets in parent -->
+            <s id="s1"></s> 
+            <s id="s2"></s>
+            <s id="s3"></s>
+            <s id="s4"></s>
+          
+            <div class="slider">
+             
+              <div style="background-color: transparent;">
+                <img src="https://dlcdnwebimgs.asus.com/gain/D48CDFF9-6C91-4A2D-B0B2-1ACD283943B4/fwebp" style="border-radius: 40px;width: 100%;">
+              
+              </div>
+              <div style="background-color: transparent;">
+                <img src="https://www.gigabyte.com/FileUpload/global/news/1842/o202010080956262453.jpg" style="border-radius: 40px;width: 100%;">
+              </div>
+              <div style="background-color: transparent;">
+                <img src="https://dlcdnwebimgs.asus.com/gain/08557FA1-E6BB-4FB3-BF2B-D18ED0E0A57C/fwebp" style="border-radius: 40px;width: 100%;">
+              </div>
+              <div style="background-color: transparent ;">
+                <img src="https://dlcdnwebimgs.asus.com/gain/9EF06B07-C596-4CF9-A94B-FF2BAA726C6E/fwebp" style="border-radius: 40px;width: 100%;">
+               </div>
+            </div>
+            
+            <div class="prevNext">
+              <div><a href="#s4"></a><a href="#s2"></a></div>
+              <div><a href="#s1"></a><a href="#s3"></a></div>
+              <div><a href="#s2"></a><a href="#s4"></a></div>
+              <div><a href="#s3"></a><a href="#s1"></a></div>
+            </div>
+          
+            <div class="bullets">
+              <a href="#s1">1</a>
+              <a href="#s2">2</a>
+              <a href="#s3">3</a>
+              <a href="#s4">4</a>
+            </div>
+          
+          </div>
+        </div>
+
+    <div class="banner">
+        <img src="" style="width: 100%;">
+    </div>
+    <br>
+    
+    
+
+<h1>
+    New Releases
+</h1>
+<div class="vid-container">
+<div class="vid">
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/J5q3AlBfg2w?si=FMWBzqZpHjIvxtPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="vid">
+    <div class="content">
+    <p style="font-size: 50px; font-weight: bolder;">
+        GeForce RTX 4090
+    </p>
+    <p style="font-size: 30px; font-weight: bold;">Beyond Fast</p><br><br>
+    <p style="font-size: 20px;">The NVIDIA® GeForce RTX™ 4090 is the ultimate GeForce GPU. It brings an enormous leap in performance, efficiency, and AI-powered graphics. Experience ultra-high performance gaming, incredibly detailed virtual worlds, unprecedented productivity, and new ways to create. It’s powered by the NVIDIA Ada Lovelace architecture and comes with 24 GB of 
+        G6X memory to deliver the ultimate experience for gamers and creators.</p>
+        <div class="press">
+
+        <button style="padding: 20px;"><a href="#shop" > SHOP NOW</a></button>
+
+    </div>
+</div>
+</div>
+</div>
+<br>
+   <h1>
+    Most Viewed
+   </h1>
+   <section class="shop">
+    <div class="card-container">
+     
+
+       
+    </div>   </section>
+<br><br><br>
+    <div class="foot">
+        <h1>About Us</h1>
+        <p style="text-align: center;font-size: x-small;">© 2022 NVIDIA Corporation. NVIDIA, the NVIDIA logo, GeForce, GeForce Experience, GeForce RTX, and G-SYNC are registered trademarks and/or trademarks of NVIDIA Corporation in the United States and other countries.<br> All other 
+            trademarks and copyrights are the property of their respective owners.</p>       
+             <ul>
+            <li><a href="#contact">Contact US</a></li>
+            <li><a href="#event">New Event</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#document">Documents</a></li>
+            <li><a href="#tech">Technology</a></li>
+            <li><a href="#blog">Blogs</a></li>
+            <li><a href="https://www.nvidia.com/en-in/">Official Site</a></li>
+            <li><a href="#Developer">Developer</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
